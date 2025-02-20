@@ -34,4 +34,4 @@ build/
 .vscode/
 
 ### DS STORE ##
-.DS_Store
+*/.DS_Store
