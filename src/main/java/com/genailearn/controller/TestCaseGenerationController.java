@@ -1,13 +1,12 @@
-package com.testleaf.controller;
+package com.genailearn.controller;
 
-import com.testleaf.llm.LLMTestGenerator;
-import com.testleaf.llm.TestCodeGenerator;
+import com.genailearn.llm.LLMTestGenerator;
+import com.genailearn.llm.TestCodeGenerator;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -37,7 +36,8 @@ public class TestCaseGenerationController {
         try {
             String llmResponse = llmTestGenerator.generateTestCasesFromUserStory(
                     request.getUserStoryDetails(),
-                    request.getAcceptanceCriteriaDetails()
+                    request.getAcceptanceCriteriaDetails(),
+                    request.getModelName()
             );
             String content;
             if (llmResponse.trim().startsWith("{")) {
@@ -77,6 +77,7 @@ public class TestCaseGenerationController {
     public static class UserStoryRequest {
         private String userStoryDetails;
         private String acceptanceCriteriaDetails;
+        private String modelName;
 
         public String getUserStoryDetails() {
             return userStoryDetails;
@@ -93,6 +94,11 @@ public class TestCaseGenerationController {
         public void setAcceptanceCriteriaDetails(String acceptanceCriteriaDetails) {
             this.acceptanceCriteriaDetails = acceptanceCriteriaDetails;
         }
+
+        public String getModelName() { return modelName; }
+
+        public void setModelName(String modelName) { this.modelName = modelName;}
+
     }
 }
 

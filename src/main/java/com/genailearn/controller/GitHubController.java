@@ -1,4 +1,4 @@
-package com.testleaf.controller;
+package com.genailearn.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.kohsuke.github.*;

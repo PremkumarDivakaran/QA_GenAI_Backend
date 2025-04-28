@@ -1,4 +1,4 @@
-package com.testleaf.llm;
+package com.genailearn.llm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -133,12 +133,15 @@ public class LLMTestGenerator {
     /**
      * Generates test cases for given user story
      */
-    public String generateTestCasesFromUserStory(String userStoryDetails, String acceptanceCriteriaDetails) {
+    public String generateTestCasesFromUserStory(String userStoryDetails, String acceptanceCriteriaDetails, String modelName) {
         if (userStoryDetails == null || userStoryDetails.isEmpty()) {
             return "No valid User Story details to generate test cases.";
         }
         if (acceptanceCriteriaDetails == null || acceptanceCriteriaDetails.isEmpty()) {
             return "No valid Acceptance Criteria is provided";
+        }
+        if (modelName == null || modelName.isEmpty()) {
+            return "No valid Model Name is provided";
         }
         String userPrompt = "Generate test cases for the following User Story : \n"
                 + userStoryDetails + " with acceptance criteria: " + acceptanceCriteriaDetails;

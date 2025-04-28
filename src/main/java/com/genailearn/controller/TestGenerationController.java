@@ -1,7 +1,7 @@
-package com.testleaf.controller;
+package com.genailearn.controller;
 
-import com.testleaf.llm.LLMTestGenerator;
-import com.testleaf.llm.TestCodeGenerator;
+import com.genailearn.llm.LLMTestGenerator;
+import com.genailearn.llm.TestCodeGenerator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

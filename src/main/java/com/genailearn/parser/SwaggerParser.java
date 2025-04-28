@@ -1,4 +1,4 @@
-package com.testleaf.parser;
+package com.genailearn.parser;
 
 import io.swagger.parser.OpenAPIParser;
 import io.swagger.v3.oas.models.OpenAPI;

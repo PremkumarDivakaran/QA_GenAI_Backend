@@ -1,4 +1,4 @@
-package com.testleaf.llm;
+package com.genailearn.llm;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

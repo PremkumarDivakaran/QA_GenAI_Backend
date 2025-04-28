@@ -1,8 +1,8 @@
-package com.testleaf.controller;
+package com.genailearn.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.testleaf.llm.LLMConverterService;
-import com.testleaf.llm.TestCodeGenerator;
+import com.genailearn.llm.LLMConverterService;
+import com.genailearn.llm.TestCodeGenerator;
 
 import lombok.RequiredArgsConstructor;
 

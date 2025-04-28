@@ -1,6 +1,6 @@
-package com.testleaf.controller;
+package com.genailearn.controller;
 
-import com.testleaf.runner.TestExecutor;
+import com.genailearn.runner.TestExecutor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
